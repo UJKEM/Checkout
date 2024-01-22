@@ -10,9 +10,9 @@ export class CheckoutService {
   private allowedProductNames: ProductName[];
 
   constructor(pricingRulesService: PricingRulesService) {
+    this.pricingRulesService = pricingRulesService;
     this.allowedProductSKUs = [...Object.values(ProductSKU)];
     this.allowedProductNames = [...Object.values(ProductName)];
-    this.pricingRulesService = pricingRulesService;
   }
 
   scan(product: ProductItem): void {
