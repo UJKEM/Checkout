@@ -1,4 +1,3 @@
-import { Product } from "../models/product.model";
 import { PricingRules } from "../interfaces/pricing-rules.interface";
 import { Prices } from "../constants/price.constant";
 import { ProductItem } from "../interfaces/product.interface";
