@@ -1,7 +1,6 @@
 import { ProductName } from "../constants/product.name";
 import { ProductSKU } from "../constants/product.sku";
 import { ProductItem } from "../interfaces/product.interface";
-import { Product } from "../models/product.model";
 import { PricingRulesService } from "./pricing-rules.service";
 
 export class CheckoutService {
