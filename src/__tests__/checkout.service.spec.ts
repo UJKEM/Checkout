@@ -5,14 +5,24 @@ import { Prices } from "../constants/price.constant";
 import { ProductItem } from "../interfaces/product.interface";
 import { ProductSKU } from "../constants/product.sku";
 import { ProductName } from "../constants/product.name";
+import { ThreeForTwoDealRule } from "../rules/ThreeForTwoDealRule";
+import { BulkDiscountRule } from "../rules/BulkDiscountRule";
 
 describe("CheckoutService", () => {
   let checkoutService: CheckoutService;
   let product: Product;
+  let threeForTwoDeal: ThreeForTwoDealRule;
+  let bulkDiscountDeal: BulkDiscountRule;
+  let pricingRulesService: PricingRulesService;
 
   beforeEach(() => {
     product = new Product();
-    const pricingRulesService = new PricingRulesService();
+    threeForTwoDeal = new ThreeForTwoDealRule();
+    bulkDiscountDeal = new BulkDiscountRule();
+    pricingRulesService = new PricingRulesService([
+      threeForTwoDeal,
+      bulkDiscountDeal,
+    ]);
     checkoutService = new CheckoutService(pricingRulesService);
   });
 
@@ -28,6 +38,7 @@ describe("CheckoutService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     productsArray = product.getProducts();
     productsArray.forEach((product) => checkoutService.scan(product));
@@ -44,6 +55,7 @@ describe("CheckoutService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.MBP,
@@ -71,16 +83,19 @@ describe("CheckoutService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
 
     productsArray = product.getProducts();
@@ -98,26 +113,31 @@ describe("CheckoutService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.MBP,
@@ -157,41 +177,49 @@ describe("CheckoutService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.MBP,
@@ -218,6 +246,7 @@ describe("CheckoutService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
 
     productsArray = product.getProducts();
@@ -234,26 +263,31 @@ describe("CheckoutService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.MBP,
@@ -269,16 +303,19 @@ describe("CheckoutService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
     product.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
+      specialOffer: true,
     });
 
     productsArray = product.getProducts();

@@ -5,18 +5,22 @@ import { Prices } from "./constants/price.constant";
 import { ProductItem } from "./interfaces/product.interface";
 import { ProductName } from "./constants/product.name";
 import { ProductSKU } from "./constants/product.sku";
+import { ThreeForTwoDealRule } from "./rules/ThreeForTwoDealRule";
+import { BulkDiscountRule } from "./rules/BulkDiscountRule";
 
 const products = new Product();
 products.addProduct({
   sku: ProductSKU.IPD,
   name: ProductName.Ipad,
   price: Prices.IPD,
+  specialOffer: true,
 });
 
 products.addProduct({
   sku: ProductSKU.IPD,
   name: ProductName.Ipad,
   price: Prices.IPD,
+  specialOffer: true,
 });
 
 products.addProduct({
@@ -29,6 +33,7 @@ products.addProduct({
   sku: ProductSKU.ATV,
   name: ProductName.AppleTv,
   price: Prices.ATV,
+  specialOffer: true,
 });
 
 products.addProduct({
@@ -37,7 +42,14 @@ products.addProduct({
   price: Prices.VGA,
 });
 
-const pricingRulesService = new PricingRulesService();
+const ThreeForTwoDeal = new ThreeForTwoDealRule();
+
+const BulkDiscount = new BulkDiscountRule();
+
+const pricingRulesService = new PricingRulesService([
+  ThreeForTwoDeal,
+  BulkDiscount,
+]);
 
 const checkoutService = new CheckoutService(pricingRulesService);
 
