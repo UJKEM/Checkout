@@ -7,7 +7,8 @@ import { ProductItem } from "../interfaces/product.interface";
 export class ThreeForTwoDealRule implements PricingRules {
   applySpecialPricing(products: ProductItem[]): number {
     const appleTvs = products.filter(
-      (product) => product.sku === ProductSKU.ATV
+      (product) =>
+        product.sku === ProductSKU.ATV && (product.specialOffer = true)
     );
     return (
       (Math.floor(appleTvs.length / 3) * 2 + (appleTvs.length % 3)) * Prices.ATV

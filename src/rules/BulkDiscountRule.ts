@@ -6,7 +6,8 @@ import { ProductItem } from "../interfaces/product.interface";
 export class BulkDiscountRule implements PricingRules {
   applySpecialPricing(products: ProductItem[]): number {
     const superIpads = products.filter(
-      (product) => product.sku === ProductSKU.IPD
+      (product) =>
+        product.sku === ProductSKU.IPD && (product.specialOffer = true)
     );
     return superIpads.length > 4
       ? superIpads.length * Prices.SIPD

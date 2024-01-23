@@ -37,25 +37,21 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
 
     productsArray = products.getProducts();
@@ -71,7 +67,6 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.MBP,
@@ -97,43 +92,36 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
 
     productsArray = products.getProducts();
@@ -149,13 +137,11 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
 
     productsArray = products.getProducts();
@@ -172,49 +158,41 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.ATV,
       name: ProductName.AppleTv,
       price: Prices.ATV,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.MBP,
@@ -246,25 +224,21 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.MBP,
@@ -302,7 +276,6 @@ describe("PricingRulesService", () => {
       sku: ProductSKU.IPD,
       name: ProductName.Ipad,
       price: Prices.IPD,
-      specialOffer: true,
     });
     products.addProduct({
       sku: ProductSKU.MBP,

@@ -13,14 +13,14 @@ products.addProduct({
   sku: ProductSKU.IPD,
   name: ProductName.Ipad,
   price: Prices.IPD,
-  specialOffer: true,
+  // specialOffer: true,
 });
 
 products.addProduct({
   sku: ProductSKU.IPD,
   name: ProductName.Ipad,
   price: Prices.IPD,
-  specialOffer: true,
+  // specialOffer: true,
 });
 
 products.addProduct({
@@ -33,7 +33,7 @@ products.addProduct({
   sku: ProductSKU.ATV,
   name: ProductName.AppleTv,
   price: Prices.ATV,
-  specialOffer: true,
+  // specialOffer: true,
 });
 
 products.addProduct({
