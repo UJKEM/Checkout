@@ -34,8 +34,7 @@ export class PricingRulesService implements PricingRules {
         (totalApplyingSpecialPricing += rule.applySpecialPricing(products))
     );
 
-    //Array to exclude appleTv and Ipad because their prices are calculated separately using special pricing
-    // const skipSKUs = [ProductSKU.IPD, ProductSKU.ATV];
+    //Exclude products not eligible for special offer and calculate total
     products.forEach((product) => {
       if (!product.specialOffer) {
         totalApplyingSpecialPricing += product.price;
